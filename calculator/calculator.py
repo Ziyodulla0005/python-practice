@@ -16,6 +16,20 @@ def divide(a, b):
     return a / b
 
 
+OPERATIONS = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+}
+
+
+def calculate(symbol, a, b):
+    if symbol not in OPERATIONS:
+        raise ValueError(f"Unknown operation: {symbol}")
+    return OPERATIONS[symbol](a, b)
+
+
 if __name__ == "__main__":
     print("2 + 3 =", add(2, 3))
     print("7 - 4 =", subtract(7, 4))
