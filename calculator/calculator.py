@@ -31,7 +31,6 @@ def calculate(symbol, a, b):
 
 
 if __name__ == "__main__":
-    print("2 + 3 =", add(2, 3))
-    print("7 - 4 =", subtract(7, 4))
-    print("6 * 5 =", multiply(6, 5))
-    print("8 / 2 =", divide(8, 2))
+    expressions = [("+", 2, 3), ("-", 7, 4), ("*", 6, 5), ("/", 8, 2)]
+    for symbol, a, b in expressions:
+        print(a, symbol, b, "=", calculate(symbol, a, b))
