@@ -16,5 +16,9 @@ def word_frequencies(text):
     return Counter(words)
 
 
+def most_common_words(text, limit=3):
+    return word_frequencies(text).most_common(limit)
+
+
 if __name__ == "__main__":
     print(count_words("the quick brown fox"))
