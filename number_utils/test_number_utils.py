@@ -1,6 +1,6 @@
 import unittest
 
-from number_utils import factorial, is_even, is_prime
+from number_utils import factorial, fibonacci, gcd, is_even, is_prime, lcm
 
 
 class NumberUtilsTests(unittest.TestCase):
@@ -17,6 +17,13 @@ class NumberUtilsTests(unittest.TestCase):
         self.assertEqual(factorial(5), 120)
         with self.assertRaises(ValueError):
             factorial(-1)
+
+    def test_fibonacci(self):
+        self.assertEqual(fibonacci(6), [0, 1, 1, 2, 3, 5])
+
+    def test_gcd_and_lcm(self):
+        self.assertEqual(gcd(12, 18), 6)
+        self.assertEqual(lcm(4, 6), 12)
 
 
 if __name__ == "__main__":
