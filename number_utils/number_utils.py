@@ -40,4 +40,9 @@ def lcm(a, b):
 
 
 if __name__ == "__main__":
-    print(is_even(10))
+    print("Is 10 even?", is_even(10))
+    print("Primes below 30:", [n for n in range(30) if is_prime(n)])
+    print("6! =", factorial(6))
+    print("Fibonacci:", fibonacci(10))
+    print("gcd(12, 18) =", gcd(12, 18))
+    print("lcm(4, 6) =", lcm(4, 6))
