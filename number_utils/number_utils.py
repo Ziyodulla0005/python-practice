@@ -35,5 +35,9 @@ def gcd(a, b):
     return a
 
 
+def lcm(a, b):
+    return abs(a * b) // gcd(a, b)
+
+
 if __name__ == "__main__":
     print(is_even(10))
