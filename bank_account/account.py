@@ -1,3 +1,7 @@
+class InsufficientFundsError(Exception):
+    pass
+
+
 class Account:
     def __init__(self, owner, balance=0):
         self.owner = owner
@@ -7,6 +11,13 @@ class Account:
         if amount <= 0:
             raise ValueError("Deposit must be positive")
         self.balance += amount
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            raise ValueError("Withdrawal must be positive")
+        if amount > self.balance:
+            raise InsufficientFundsError("Not enough funds")
+        self.balance -= amount
 
 
 if __name__ == "__main__":
