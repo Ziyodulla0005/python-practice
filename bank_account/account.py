@@ -6,11 +6,13 @@ class Account:
     def __init__(self, owner, balance=0):
         self.owner = owner
         self.balance = balance
+        self.history = []
 
     def deposit(self, amount):
         if amount <= 0:
             raise ValueError("Deposit must be positive")
         self.balance += amount
+        self.history.append(("deposit", amount))
 
     def withdraw(self, amount):
         if amount <= 0:
@@ -18,6 +20,7 @@ class Account:
         if amount > self.balance:
             raise InsufficientFundsError("Not enough funds")
         self.balance -= amount
+        self.history.append(("withdraw", amount))
 
     def __str__(self):
         return f"{self.owner}: {self.balance}"
