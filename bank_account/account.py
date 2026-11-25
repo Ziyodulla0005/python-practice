@@ -19,6 +19,9 @@ class Account:
             raise InsufficientFundsError("Not enough funds")
         self.balance -= amount
 
+    def __str__(self):
+        return f"{self.owner}: {self.balance}"
+
 
 if __name__ == "__main__":
     account = Account("Ali", 100)
