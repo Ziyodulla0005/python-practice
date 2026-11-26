@@ -23,5 +23,11 @@ def slugify(text):
     return text.strip("-")
 
 
+def truncate(text, limit, suffix="..."):
+    if len(text) <= limit:
+        return text
+    return text[: limit - len(suffix)] + suffix
+
+
 if __name__ == "__main__":
     print(reverse_text("python"))
