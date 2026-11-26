@@ -7,5 +7,9 @@ def is_palindrome(text):
     return cleaned == cleaned[::-1]
 
 
+def capitalize_words(text):
+    return " ".join(word.capitalize() for word in text.split())
+
+
 if __name__ == "__main__":
     print(reverse_text("python"))
