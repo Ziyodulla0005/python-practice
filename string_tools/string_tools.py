@@ -31,3 +31,8 @@ def truncate(text, limit, suffix="..."):
 
 if __name__ == "__main__":
     print(reverse_text("python"))
+    print(is_palindrome("A man, a plan, a canal: Panama"))
+    print(capitalize_words("hello brave new world"))
+    print(count_vowels("programming"))
+    print(slugify("Hello, World! Welcome"))
+    print(truncate("A very long sentence", 12))
